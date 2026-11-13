@@ -1,0 +1,33 @@
+{
+  "id": "plugin-telemetry-notifier",
+  "name": "Telemetry Alert Dispatcher (Manifest Plugin)",
+  "version": "1.0.0",
+  "author": "OMNIX Ecosystem",
+  "category": "telemetry",
+  "description": "Declarative JSON manifest plugin discovered automatically from server/plugins/manifests for dispatching threshold alerts.",
+  "permissions": ["workspace:read", "network:outbound"],
+  "allowedDomains": ["hooks.telemetry.example"],
+  "entryType": "manifest_webhook",
+  "actions": [
+    {
+      "id": "format_alert_payload",
+      "name": "Build Verified Alert Payload",
+      "description": "Formats a structured telemetry threshold payload ready for outbound webhook delivery.",
+      "requiredPermission": "workspace:read",
+      "inputSchema": {
+        "metric": {
+          "type": "string",
+          "required": true,
+          "description": "Metric name (e.g. temp_c, rpm)",
+          "defaultValue": "temp_c"
+        },
+        "threshold": {
+          "type": "number",
+          "required": false,
+          "description": "Alert threshold value",
+          "defaultValue": 85
+        }
+      }
+    }
+  ]
+}

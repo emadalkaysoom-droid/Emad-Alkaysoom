@@ -1,0 +1,6 @@
+{
+  "name": "OMNIX — The Universal Intelligence Platform",
+  "description": "Unified Multimodal AI Operating System, Multi-Agent Orchestration, 3D Studio, Physics Simulation, Knowledge Graph, and Data Intelligence Platform.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
